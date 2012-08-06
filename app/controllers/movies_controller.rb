@@ -9,6 +9,7 @@ class MoviesController < ApplicationController
   def index
     @order = params[:order]
     @movies = Movie.find(:all, :order=>@order)
+    @all_ratings=['G','PG','PG-13','R']
   end
 
   def new
